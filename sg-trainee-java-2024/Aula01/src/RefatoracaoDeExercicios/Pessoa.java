@@ -19,6 +19,7 @@ public class Pessoa {
         this.idade = idade;
     }
 
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
