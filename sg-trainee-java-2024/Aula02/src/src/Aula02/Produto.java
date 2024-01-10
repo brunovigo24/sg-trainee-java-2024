@@ -1,30 +1,32 @@
 package Aula02;
 
+import javax.annotation.processing.Generated;
 import java.util.SimpleTimeZone;
 
+
 public class Produto {
+    private Integer id;
 
     private String nome;
-    private double preco;
-    private int quantidade;
+    private Double preco;
+    private Integer quantidade;
     private SituacaoDeProduto status;
 
-    // private boolean ativo;
 
-    public SituacaoDeProduto getStatus() {
-        return status;
-    }
-
-    public void setStatus(SituacaoDeProduto status) {
-        this.status = status;
-    }
-
-    public Produto(String nome, double preco, int quantidade, SituacaoDeProduto status) {
+    public Produto(Integer id, String nome, double preco, int quantidade, SituacaoDeProduto status) {
+        this.id = id;
         this.nome = nome;
         this.preco = preco;
         this.quantidade = quantidade;
         this.status = status;
-        // this.ativo = ativo;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
     public String getNome() {
         return nome;
@@ -44,13 +46,14 @@ public class Produto {
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
-
-   /* public boolean isAtivo() {
-        return ativo;
+    public SituacaoDeProduto getStatus() {
+        return status;
     }
-    public void setAtivo(boolean ativo) {
-        this.ativo = ativo;
-    } */
+
+    public void setStatus(SituacaoDeProduto status) {
+        this.status = status;
+    }
+
 
     @Override
     public String toString() {
@@ -62,4 +65,3 @@ public class Produto {
                 '}';
     }
 }
-

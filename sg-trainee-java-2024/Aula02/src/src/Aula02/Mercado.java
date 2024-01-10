@@ -55,6 +55,9 @@ public class Mercado {
         for (Produto produto : produtos) {
             System.out.println(produto);
         }
+        if (produtos == null) {
+            System.out.println("Produto não cadastrado.");
+        }
     }
 
     private static void cadastrarProduto() {
@@ -72,28 +75,28 @@ public class Mercado {
         System.out.println("O produto está ativo? (1 - sim, 0 - não)");
         int ativoouinativo = scanner.nextInt();
 
-        SituacaoDeProduto situacaoDeProduto = null;
+        SituacaoDeProduto situacaoDeProduto = SituacaoDeProduto.valueOf(ativoouinativo == 1 ? "ATIVO" : "INATIVO");
+
+        Integer id = produtos.size()+1;
+        produtos.add(new Produto(id, nome, preco, quantidade, situacaoDeProduto));
+        scanner.nextLine();
+
+        System.out.println("Produto cadastrado com sucesso!");
+
+        /*SituacaoDeProduto situacaoDeProduto = null;
         if (ativoouinativo == 1 ){
             situacaoDeProduto = SituacaoDeProduto.ATIVO;
         } else {
             situacaoDeProduto = SituacaoDeProduto.INATIVO;
-        }
+        }*/
 
         //SituacaoDeProduto situacaoDeProduto = SituacaoDeProduto.valueOf(scanner.nextLine());
 
-        //SituacaoDeProduto situacaoDeProduto = SituacaoDeProduto.valueOf(ativoouinativo == 1 ? "ATIVO" : "INATIVO");
-
         //SituacaoDeProduto situacaoDeProduto = ativoouinativo == 1 ? SituacaoDeProduto.ATIVO : SituacaoDeProduto.INATIVO ;
 
-
-        produtos.add(new Produto(nome, preco, quantidade, situacaoDeProduto);
-        scanner.nextLine();
-
-
-        System.out.println("Produto cadastrado com sucesso!");
     }
 
-    private static void ativarDesativarProduto() {
+   /* private static void ativarDesativarProduto() {
         Scanner scanner = new Scanner(System.in);
 
 // Parei aqui
@@ -105,11 +108,32 @@ public class Mercado {
         if (produto == null) {
             System.out.println("Produto não encontrado.");
         } else {
-            SituacaoDeProduto.ATIVO : SituacaoDeProduto.INATIVO ;
+            SituacaoDeProduto status = SituacaoDeProduto.ATIVO;
+            System.out.println(status.getLabel());
 
             System.out.println("Produto " + (produto.isAtivo() ? "ativado" : "desativado") + " com sucesso!");
         }
-    }
+    }*/
+   private static void ativarDesativarProduto() {
+       Scanner scanner = new Scanner(System.in);
+
+       System.out.println("Digite o código do produto:");
+       int codigo = scanner.nextInt();
+
+       Produto produto = buscarProdutoPorCodigo(codigo);
+
+       if (produto == null) {
+           System.out.println("Produto não encontrado.");
+       } else {
+           SituacaoDeProduto statusAtual = produto.getStatus();
+           produto.setStatus(statusAtual == SituacaoDeProduto.ATIVO ? SituacaoDeProduto.INATIVO : SituacaoDeProduto.ATIVO);
+
+           System.out.println("Produto " + produto.getStatus().getLabel() + " com sucesso!");
+       }
+   }
+
+
+
 
     private static void adicionarEstoque() {
         Scanner scanner = new Scanner(System.in);
@@ -135,14 +159,23 @@ public class Mercado {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Digite o código do produto:");
-        int codigo = scanner.nextInt();
+        int id = scanner.nextInt();
 
-        Produto produto = buscarProdutoPorCodigo(codigo);
+        Produto produto = buscarProdutoPorCodigo(id);
 
         if (produto == null) {
             System.out.println("Produto não encontrado.");
         } else {
             System.out.println("Digite a quantidade a ser retirada:");
         }
-    }
+   }
+
+   private static Produto buscarProdutoPorCodigo(Integer id){
+       for (Produto produto : produtos) {
+           if (produto.getId().equals(id)){
+               return produto;
+           }
+       }
+       return null;
+   }
 }
