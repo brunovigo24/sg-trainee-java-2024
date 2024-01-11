@@ -4,25 +4,19 @@ import javax.annotation.processing.Generated;
 import java.util.SimpleTimeZone;
 
 
-public class Produto {
-    private Integer id;
-
+public class Produto  extends PadraoIdInteiro{
     private String nome;
     private Double preco;
-    private Integer quantidade;
+    private Integer estoque;
     private SituacaoDeProduto status;
 
 
-    public Produto(Integer id, String nome, double preco, int quantidade, SituacaoDeProduto status) {
+    public Produto(Integer id, String nome, double preco, int estoque,SituacaoDeProduto status) {
         this.id = id;
         this.nome = nome;
         this.preco = preco;
-        this.quantidade = quantidade;
+        this.estoque = estoque;
         this.status = status;
-    }
-
-    public Integer getId() {
-        return id;
     }
 
     public void setId(Integer id) {
@@ -40,12 +34,9 @@ public class Produto {
     public void setPreco(double preco) {
         this.preco = preco;
     }
-    public int getQuantidade() {
-        return quantidade;
-    }
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
+
+    public Integer getEstoque() {return estoque;}
+    public void setEstoque(Integer estoque) {this.estoque = estoque;}
     public SituacaoDeProduto getStatus() {
         return status;
     }
@@ -60,7 +51,7 @@ public class Produto {
         return "Produto{" +
                 "nome='" + nome + '\'' +
                 ", preco=" + preco +
-                ", quantidade=" + quantidade +
+                ", estoque=" + estoque +
                 ", ativo=" + status +
                 '}';
     }
