@@ -6,10 +6,10 @@ import java.util.Scanner;
 
 public class main extends ListagemDeProdutos {
 
-public static void main (String[] args) {
-    Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-    int opcao = 9;
+        int opcao = 9;
 
 
         while (opcao != 6) {
@@ -44,14 +44,11 @@ public static void main (String[] args) {
                         System.out.println("Saindo...");
                         break;
                     default:
-                        System.out.println("Opção inválida.");
-                        break;
 
-                    if (opcao < 1 || opcao > 6) {
-                        System.out.println("Opção inválida.");
-                        break;
-
-                    }
+                        if (opcao < 1 || opcao > 6) {
+                            System.out.println("Opção inválida.");
+                            break;
+                        }
                 }
 
             } catch (Exception e) {
@@ -59,24 +56,26 @@ public static void main (String[] args) {
 
             }
         }
+    }
 
-        class Leitor {
-            public static int lerInteiro(String mensagem) {
+    public class Leitor {
+        public static int lerInteiro(String mensagem) {
 
-                boolean valido = false;
-                while (!valido) {
-                    try {
-                        System.out.println(mensagem);
-                        Scanner scanner = new Scanner(System.in);
-                        int inteiro = Integer.parseInt(scanner.nextLine());
-                        valido = true;
-                        return inteiro;
-                    } catch (Exception e) {
-                        System.out.println("Por favor, digite um número válido:");
-                    }
+            boolean valido = false;
+            while (!valido) {
+                try {
+                    System.out.println(mensagem);
+                    Scanner scanner = new Scanner(System.in);
+                    int inteiro = Integer.parseInt(scanner.nextLine());
+                    valido = true;
+                    scanner.close(); // Close the Scanner
+                    return inteiro;
+                } catch (Exception e) {
+                    System.out.println("Por favor, digite um número válido:");
                 }
-                return 0;
             }
+            return 0;
         }
     }
 }
+
