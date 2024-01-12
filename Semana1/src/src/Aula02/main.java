@@ -1,10 +1,14 @@
 package Aula02;
 
 
+import java.sql.SQLOutput;
+import java.util.List;
 import java.util.Scanner;
 
+import static Aula02.ListagemDeProdutos.menuProdutos;
 
-public class main extends ListagemDeProdutos {
+
+public class main extends GestaoProduto {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -12,21 +16,26 @@ public class main extends ListagemDeProdutos {
         int opcao = 9;
 
 
-        while (opcao != 6) {
+        while (opcao != 7) {
             try {
-                System.out.println("O que deseja fazer?");
-                System.out.println("1 - Visualizar produtos");
-                System.out.println("2 - Cadastrar produto");
-                System.out.println("3 - Ativar/desativar produto");
-                System.out.println("4 - Adicionar estoque");
-                System.out.println("5 - Retirar estoque");
-                System.out.println("6 - Sair");
+                System.out.println("\nEscolha uma opção: " +
+                        "\n 1 - Visualizar produtos " +
+                        "\n 2 - Adicionar produto " +
+                        "\n 3 - Alterar situação do produto " +
+                        "\n 4 - Adicionar estoque ao produto " +
+                        "\n 5 - Retirar estoque do produto " +
+                        "\n 6 - Remover produto " +
+                        "\n 7 - Sair do programa \n");
 
                 opcao = scanner.nextInt();
 
                 switch (opcao) {
                     case 1:
-                        VisualizarTodosPrudutos();
+                        if (produtos.isEmpty()) {
+                            System.out.println("Produto não cadastrado.");
+                            break;
+                        }
+                        menuProdutos(produtos, scanner);
                         break;
                     case 2:
                         cadastrarProduto();
@@ -41,8 +50,12 @@ public class main extends ListagemDeProdutos {
                         retirarEstoque();
                         break;
                     case 6:
+                        removerProduto();
+                        break;
+                    case 7:
                         System.out.println("Saindo...");
                         break;
+
                     default:
 
                         if (opcao < 1 || opcao > 6) {
@@ -55,26 +68,6 @@ public class main extends ListagemDeProdutos {
                 System.out.println("Algo deu errado");
 
             }
-        }
-    }
-
-    public class Leitor {
-        public static int lerInteiro(String mensagem) {
-
-            boolean valido = false;
-            while (!valido) {
-                try {
-                    System.out.println(mensagem);
-                    Scanner scanner = new Scanner(System.in);
-                    int inteiro = Integer.parseInt(scanner.nextLine());
-                    valido = true;
-                    scanner.close(); // Close the Scanner
-                    return inteiro;
-                } catch (Exception e) {
-                    System.out.println("Por favor, digite um número válido:");
-                }
-            }
-            return 0;
         }
     }
 }
