@@ -10,9 +10,9 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
 
 @SpringBootApplication
-public class SemanadoisApplication {
+public class CinemaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SemanadoisApplication.class, args);
+		SpringApplication.run(CinemaApplication.class, args);
 	}
 }

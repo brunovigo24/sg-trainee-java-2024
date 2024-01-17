@@ -1,13 +1,12 @@
 package com.semanadois.semanadois.produto;
 
-
-import entidades.Produto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestMapping;
-import repositorios.ProdutoRepository;
 
+import java.util.List;
 
+@Service
 public class ProdutoService {
 
     private final ProdutoRepository produtoRepository;
@@ -22,4 +21,18 @@ public class ProdutoService {
         return this.produtoRepository.save(produto);
     }
 
+    public Produto pegarPorId(Integer id) {
+        return this.produtoRepository.findById(id).orElse(null);
+    }
+
+    @Transactional
+    public void deletarProduto(Integer id) {
+        this.produtoRepository.deleteById(id);
+    }
+
+
+    @Transactional(readOnly = true)
+    public List<Produto> findByNome(String nome) {
+        return this.produtoRepository.findAllByNome("%" + nome + "%");
+    }
 }
