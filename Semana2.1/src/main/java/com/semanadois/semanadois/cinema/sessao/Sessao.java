@@ -1,5 +1,6 @@
 package com.semanadois.semanadois.cinema.sessao;
 
+import com.semanadois.semanadois.cinema.Entity.EntityId;
 import com.semanadois.semanadois.cinema.assentos.Assentos;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -8,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -15,21 +17,21 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity(name = "sessao")
-public class Sessao {
+public class Sessao extends EntityId {
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "assentos_id")
+    @JoinColumn(name = "sessao_id")
     private List<Assentos> assentos;
 
-    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 
-    @Id
-    @Column(name = "numsessao", nullable = false)
-    private int numsessao;
+    @Column(name = "numeroSessao", nullable = false)
+    private int numemoSessao;
 
     @Column(name ="horarioinicio", nullable = false)
-    private SimpleDateFormat horarioinicio;
+    private Date horarioinicio;
 
     @Column(name ="horariotermino", nullable = false)
-    private SimpleDateFormat horariotermino;
+    private Date horariotermino;
+
+
 }

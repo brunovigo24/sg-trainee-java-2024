@@ -17,7 +17,7 @@ public class PessoaControlador {
         this.pessoaService = pessoaService;
     }
 
-    @PostMapping("")
+    @PostMapping("/cadastrar")
     public ResponseEntity<Pessoa> cadastrar(@RequestBody Pessoa pessoa) {
         return ResponseEntity.ok(this.pessoaService.cadastrar(pessoa));
     }

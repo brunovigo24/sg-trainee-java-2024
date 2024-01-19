@@ -1,5 +1,6 @@
 package com.semanadois.semanadois.cinema.pessoa;
 
+import com.semanadois.semanadois.cinema.Entity.EntityId;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,18 +14,9 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity(name = "pessoa")
-public class Pessoa {
-
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+public class Pessoa extends EntityId {
 
     @Column(nullable = false, unique = true)
     private String nome;
 
-    @Column(nullable = false, unique = true)
-    private String email;
-    private LocalDate dataNascimento;
-    private String telefone;
 }

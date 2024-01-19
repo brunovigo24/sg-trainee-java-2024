@@ -1,6 +1,7 @@
 package com.semanadois.semanadois.cinema.filme;
 
 
+import com.semanadois.semanadois.cinema.Entity.EntityId;
 import com.semanadois.semanadois.cinema.sessao.Sessao;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -9,6 +10,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -16,26 +18,18 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity(name = "filme")
-public class Filme {
+public class Filme extends EntityId {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "filme_id")
-    private List<Sessao> sessoes;
+    private List<Sessao> sessaoList;
 
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    @Column(name ="nomeFilme", nullable = false)
+    private String nomeFilme;
 
-    @Column(name ="nome", nullable = false)
-    private String nome;
+    @Column(name ="inicio_cartaz", nullable = false)
+    private Date inicio_cartaz;
 
-    @Column(name ="datainicio", nullable = false)
-    private LocalDate datainicio;
-
-    @Column(name ="datafimcartaz", nullable = false)
-    private LocalDate datafimcartaz;
-
-
-
+    @Column(name ="termino_cartaz", nullable = false)
+    private Date termino_cartaz;
 }
