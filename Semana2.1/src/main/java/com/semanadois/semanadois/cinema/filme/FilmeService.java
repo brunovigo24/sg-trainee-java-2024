@@ -50,28 +50,34 @@ public class FilmeService {
 
     @Transactional
     public Filme gerarSessoesAssentos(GerarSessoesAssentosDTO dto) {
-         Filme filme = this.getById(dto.getFilmeId());
-         if (Objects.nonNull(filme)) {
-             for (int s = 1; s < dto.getNumeroSessao(); s++) {
-                 List<Sessao> sessaoList = new ArrayList<>();
-                 Sessao sessao = new Sessao();
-                 sessao.setNumemoSessao(s);
-                 sessao.setHorarioinicio(new Date());
-                 sessao.setHorariotermino(new Date());
-                 // criar assentos
+        Filme filme = this.getById(dto.getFilmeId());
+        if (Objects.nonNull(filme)) {
+            List<Sessao> sessaoList = null;
+            for (int s = 1; s < dto.getNumeroSessao(); s++) {
+                sessaoList = new ArrayList<>();
+                Sessao sessao = new Sessao();
+                sessao.setNumemoSessao(s);
+                sessao.setHorarioinicio(new Date());
+                sessao.setHorariotermino(new Date());
 
-                 for (int a = 1; a < dto.getNumeroAssento(); a++) {
-                     List<Assentos> assentosList = new ArrayList<>();
-                     Assentos assento = new Assentos();
-                     assento.setNumeroassento(a);
-                     assentosList.add(assento);
-                 }
-                 //sessao.setAssentos(assentosList);
-             }
-             this.cadastrar(filme);
-             return filme;
-         } else {
-             throw new RuntimeException("Não tem filme com esse código!");
-         }
-    } //Quando vou gerar sessão assentos o sessão list retorna zerado
+                // criar assentos
+                List<Assentos> assentosList = new ArrayList<>();
+                for (int a= 1; a <= dto.getNumeroAssento(); a++) {
+                    Assentos assento = new Assentos();
+                    assento.setNumeroassento(a);
+                    assentosList.add(assento);
+                }
+                sessao.setAssentos(assentosList);
+                sessaoList.add(sessao);
+            }
+
+            // atribuir a lista de sessões ao filme
+            filme.setSessaoList(sessaoList);
+
+            this.cadastrar(filme);
+            return filme;
+        } else {
+            throw new RuntimeException("Não tem filme com esse código!");
+        }
+    }
 }

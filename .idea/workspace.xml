@@ -5,52 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ef197b6-34fb-4a91-b765-a0171599e8c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Semana2/build/classes/java/main/com/semanadois/semanadois/SemanadoisApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana2/build/classes/java/main/com/semanadois/semanadois/produto/Produto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana2/build/classes/java/main/com/semanadois/semanadois/produto/ProdutoAPI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana2/build/classes/java/main/com/semanadois/semanadois/produto/ProdutoRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana2/build/classes/java/main/com/semanadois/semanadois/produto/ProdutoService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana2/h2db.mv.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana2/out/production/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana2/src/main/java/com/semanadois/semanadois/produto/Produto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana2/src/main/java/com/semanadois/semanadois/produto/ProdutoAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana2/src/main/java/com/semanadois/semanadois/produto/ProdutoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana2/target/classes/com/semanadois/semanadois/produto/Produto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana2/target/classes/com/semanadois/semanadois/produto/ProdutoAPI.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana2/target/classes/com/semanadois/semanadois/produto/ProdutoRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana2/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana2/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana2/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana2/sqlitedb.db" beforeDir="false" afterPath="$PROJECT_DIR$/Semana2/sqlitedb.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana2/src/main/java/com/semanadois/semanadois/SemanadoisApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana2/src/main/java/com/semanadois/semanadois/SemanadoisApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana2/src/main/java/com/semanadois/semanadois/produto/ProdutoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana2/src/main/java/com/semanadois/semanadois/produto/ProdutoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana2/src/main/java/controladores/ProdutoAPI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana2/src/main/java/entidades/Produto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana2/src/main/java/repositorios/ProdutoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Semana2/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/memory" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/sqlitedb.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/src/main/java/com/semanadois/semanadois/SemanadoisApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/src/main/java/com/semanadois/semanadois/produto/ProdutoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/src/main/java/controladores/ProdutoAPI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/src/main/java/entidades/Produto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/src/main/java/repositorios/ProdutoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/semanadois/src/test/java/com/semanadois/semanadois/SemanadoisApplicationTests.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/Entity/EntityId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/aluguel/Alugar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/aluguel/AlugarControlador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/aluguel/AlugarRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/aluguel/AlugarService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/dtos/AlugarLivrosDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/dtos/IdentificadorDeLivroDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/livro/Livro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/livro/LivroControlador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/livro/LivroRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/livro/LivroService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/livro/SituacaoDeLivro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/pessoa/Pessoa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/pessoa/PessoaControlador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/pessoa/PessoaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova02/src/main/java/prova02/biblioteca/pessoa/PessoaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana2.1/h2db.mv.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana2.1/src/main/java/com/semanadois/semanadois/cinema/filme/FilmeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana2.1/src/main/java/com/semanadois/semanadois/cinema/filme/FilmeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana2.1/target/classes/com/semanadois/semanadois/cinema/filme/FilmeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Semana2.1/target/classes/com/semanadois/semanadois/cinema/filme/FilmeService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,20 +48,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/professor/Desktop/sg-trainee-java-2024/Semana2",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/professor/Desktop/sg-trainee-java-2024/Semana2&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
