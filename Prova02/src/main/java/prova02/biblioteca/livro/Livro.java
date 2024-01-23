@@ -1,9 +1,6 @@
 package prova02.biblioteca.livro;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,18 +20,26 @@ import java.util.List;
 @Entity(name = "livro")
 public class Livro extends EntityId {
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "livroid")
-    private List<Alugar> alugarList;
+    private List<IdentificadorDeLivroDTO> identificadorDeLivroDTOS;
 
+    @Column(name = "nome")
     private String nome;
 
+    @Column(name = "situacao")
+    private SituacaoDeLivro situacao;
+
+    @Column(name = "dataDeCadastro")
     private Date dataDeCadastro;
 
-    private String quantidadeTotal;
+    @Column(name = "quantidadeTotal")
+    private int quantidadeTotal;
 
-    private String quantidadeDisponivel;
+    @Column(name = "quantidadeDisponivel")
+    private int quantidadeDisponivel;
 
-    private String quantidadeAlugada;
+    @Column(name = "quantidadeAlugada")
+    private int quantidadeAlugada;
 
 }

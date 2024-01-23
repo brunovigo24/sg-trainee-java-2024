@@ -33,13 +33,13 @@ public class PessoaControlador {
         return ResponseEntity.ok(this.pessoaService.pegarPorId(id));
     }
 
-    @DeleteMapping("/{id}")
+    /*@DeleteMapping("/{id}")
     public ResponseEntity<Void> deletarPorId(@PathVariable Integer id) {
         if (Objects.nonNull(numeroaluguel)) {
             this.pessoaService.deletarPessoa(id);
             return ResponseEntity.accepted().build();
         }
-    }
+    }*/
 
     @GetMapping("/por-nome")
     public ResponseEntity<List<Pessoa>> findByNome(@RequestParam(name = "nome") String nome) {

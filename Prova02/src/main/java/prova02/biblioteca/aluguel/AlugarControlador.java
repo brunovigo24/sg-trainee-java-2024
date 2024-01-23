@@ -3,11 +3,6 @@ package prova02.biblioteca.aluguel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import prova02.biblioteca.dtos.AlugarLivrosDTO;
-import prova02.biblioteca.dtos.IdentificadorDeLivroDTO;
-import prova02.biblioteca.livro.Livro;
-import prova02.biblioteca.livro.LivroRepository;
-import prova02.biblioteca.livro.LivroService;
 
 import java.util.List;
 
@@ -42,7 +37,7 @@ public class AlugarControlador {
         return ResponseEntity.ok(this.alugarService.findByNome(nome));
     }
 
-    @PostMapping("/alugar-livro/{livroId}")
+    /*@PostMapping("/alugar-livro/{livroId}")
     public ResponseEntity alugarLivro(@PathVariable Integer filmeId,
                                            @RequestParam(name = "pessoaId") Integer pessoaId,
                                            @RequestBody IdentificadorDeLivroDTO identificadorDeLivroDTO) {
@@ -53,6 +48,6 @@ public class AlugarControlador {
                         identificadorDeLivroDTO
                 )
         );
-    }
+    }*/
 
 }

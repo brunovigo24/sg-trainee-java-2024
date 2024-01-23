@@ -2,9 +2,6 @@ package prova02.biblioteca.aluguel;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
-import prova02.biblioteca.dtos.AlugarLivrosDTO;
-import prova02.biblioteca.dtos.IdentificadorDeLivroDTO;
-import prova02.biblioteca.livro.Livro;
 
 import java.util.*;
 
@@ -30,7 +27,7 @@ public class AlugarService {
     public List<Alugar> findByNome(String nome) {
         return this.alugarRepository.findAllByNome(Integer.valueOf("%" + nome + "%"));
     }
-    @Transactional
+    /*@Transactional
     public List<Alugar> alugarLivro(Integer livroId,
                                       Integer pessoaId,
                                       IdentificadorDeLivroDTO identificadorDeLivroDTO) {
@@ -45,6 +42,6 @@ public class AlugarService {
             }
         });
         return this.alugarRepository.saveAll(alugar);
-    }
+    }*/
 
 }

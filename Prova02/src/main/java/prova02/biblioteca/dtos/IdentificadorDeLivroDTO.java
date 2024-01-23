@@ -15,8 +15,9 @@ import prova02.biblioteca.Entity.EntityId;
 @Entity(name = "identificadordelivro")
 public class IdentificadorDeLivroDTO  {
 
-    Integer livroId;
-    Integer numeroAluguel;
+
+    @Column(name = "numero")
+    Integer numero;
     @Column(name = "pessoaId")
     private Integer pessoaId;
 

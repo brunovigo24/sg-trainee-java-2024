@@ -15,7 +15,7 @@ import prova02.biblioteca.Entity.EntityId;
 @Entity(name = "pessoa")
 public class Pessoa extends EntityId {
 
-    @Column(nullable = false, unique = true)
+    @Column(name = "nome")
     private String nome;
 
 }

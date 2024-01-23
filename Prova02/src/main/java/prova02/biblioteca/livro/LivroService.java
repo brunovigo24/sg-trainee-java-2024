@@ -1,15 +1,13 @@
 package prova02.biblioteca.livro;
 
 
+import jakarta.persistence.criteria.CriteriaBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import prova02.biblioteca.aluguel.Alugar;
-import prova02.biblioteca.dtos.AlugarLivrosDTO;
+import prova02.biblioteca.dtos.AlugarEDevolveLivros;
 import prova02.biblioteca.dtos.IdentificadorDeLivroDTO;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -26,6 +24,51 @@ public class LivroService {
     @Transactional
     public Livro cadastrar(Livro livro) {
         return this.livroRepository.save(livro);
+    }
+
+
+    @Transactional
+    public Livro porOrdemAlfabetica(Livro livro) {
+        return this.livroRepository.save(livro);
+    }
+
+    @Transactional(readOnly = true)
+    public List<Livro> getOndeTemDisponivel() {
+        List<Livro> livros = this.livroRepository.findAll();
+        livros = livros
+                .stream()
+                .filter(livro -> livro.getQuantidadeDisponivel() > 0)
+                .toList();
+        return livros;
+    }
+
+    @Transactional
+    public void alugaLivro(List<AlugarEDevolveLivros> dtos, Integer pessoaId) {
+        if (Objects.isNull(dtos)) {
+            throw new RuntimeException("DTO nulo");
+        }
+        dtos.forEach(dto -> {
+            Livro livro = this.livroRepository
+                    .findById(dto.getLivroId())
+                    .orElseThrow(RuntimeException::new);
+            if (livro.getSituacao().equals(SituacaoDeLivro.INATIVO)) {
+                List<IdentificadorDeLivroDTO> identificadorDeLivroDTOS = livro.getIdentificadorDeLivroDTOS()
+                        .stream()
+                        .filter(idem -> dto.getNumeros().contains(idem.getNumero())
+                                && Objects.isNull(idem.getPessoaId()))
+                        .toList();
+                if (identificadorDeLivroDTOS.size() != dto.getNumeros().size()) {
+                    throw new RuntimeException("Algum livro não está dsponivel: ");
+                }
+                identificadorDeLivroDTOS.forEach(idem -> {
+                    idem.setPessoaId(pessoaId);
+                });
+                livro.setQuantidadeAlugada(livro.getQuantidadeAlugada() + identificadorDeLivroDTOS.size());
+                livro.setQuantidadeDisponivel(livro.getQuantidadeDisponivel() - identificadorDeLivroDTOS);
+                this.livroRepository.save(livro);
+            }
+        });
+
     }
 
 
@@ -48,7 +91,7 @@ public class LivroService {
         return this.livroRepository.findAllByNome("%" + nome + "%");
     }
 
-    @Transactional
+    /*@Transactional
     public Livro gerarIdentificadorDeLivro (IdentificadorDeLivroDTO dto) {
         Livro livro = this.getById(dto.getLivroId());
         if (Objects.nonNull(livro)) {
@@ -68,6 +111,6 @@ public class LivroService {
         } else {
             throw new RuntimeException("Não tem livro com esse código!");
         }
-    }
+    }*/
 
 }
