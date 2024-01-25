@@ -3,7 +3,9 @@ package semana03.hospital.paciente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import semana03.hospital.hospital.Hospital;
 
+import java.util.List;
 import java.util.Objects;
 
 @Service
@@ -40,8 +42,10 @@ public class PacienteService {
     @Transactional
     public void deletarPaciente(Integer pacienteId) {
         this.pegarPacientePorId(pacienteId);
-        if (this.pacienteRepository.existsIdentificadorDeLeito(pacienteId)) {
-            throw new RuntimeException("Paciente ainda está ocupando um leito");
-        }
+    }
+
+    @Transactional(readOnly = true)
+    public List<Hospital> getByNomeContainsIgnoreCase(String nome) {
+        return this.pacienteRepository.getByNomeContainsIgnoreCase("%" + nome + "%");
     }
 }

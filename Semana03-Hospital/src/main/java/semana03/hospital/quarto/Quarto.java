@@ -8,12 +8,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import semana03.hospital.Entity.EntityId;
+import semana03.hospital.leito.Leito;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity(name = "quarto")
 public class Quarto extends EntityId {
+    private List<Leito> leitos = new ArrayList<>();
 
     @Column(name = "codigo")
     private Integer codigo;

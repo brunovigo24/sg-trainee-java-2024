@@ -5,34 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ef197b6-34fb-4a91-b765-a0171599e8c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/Entity/EntityId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/Ala.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/AlaAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/AlaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/AlaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/hospital/Hospital.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/hospital/HospitalAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/hospital/HospitalRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/hospital/HospitalService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/hospitalApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/identificadorDeLeito/IdentificadorDeLeito.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/leito/Leito.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/leito/StatusLeito.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/paciente/Paciente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/paciente/PacienteAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/paciente/PacienteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/paciente/PacienteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/quarto/Quarto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/quarto/StatusQuarto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/test/java/semana03/hospital/Prova02ApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/DTOs/GerarAlaQuartosELeitosDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/leito/LeitoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/quarto/QuartoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/Ala.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/Ala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/AlaAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/AlaAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/AlaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/AlaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/AlaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/AlaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/hospital/Hospital.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/hospital/Hospital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/identificadorDeLeito/IdentificadorDeLeito.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/identificadorDeLeito/IdentificadorDeLeito.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/leito/Leito.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/leito/Leito.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/paciente/PacienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/paciente/PacienteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/paciente/PacienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/paciente/PacienteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/quarto/Quarto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/quarto/Quarto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/professor/Desktop/sg-trainee-java-2024/Semana03-Hospital",
+    "last_opened_file_path": "C:/Users/professor/Desktop/sg-trainee-java-2024",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",

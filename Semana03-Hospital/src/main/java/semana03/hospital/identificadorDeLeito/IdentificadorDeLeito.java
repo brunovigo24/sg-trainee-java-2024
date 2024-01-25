@@ -10,7 +10,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-@Entity(name = "identificador_de_leito")
 public class IdentificadorDeLeito {
     @Column(name = "pessoa_id")
     private Integer pessoaId;

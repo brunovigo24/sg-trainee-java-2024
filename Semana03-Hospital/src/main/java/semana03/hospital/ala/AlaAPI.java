@@ -1,6 +1,30 @@
 package semana03.hospital.ala;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import semana03.hospital.DTOs.GerarAlaQuartosELeitosDTO;
+import semana03.hospital.hospital.HospitalService;
+
+@RestController
+@RequestMapping("/alas")
 public class AlaAPI {
+
+    private final AlaService alaService;
+
+    @Autowired
+    public AlaAPI(AlaService alaService) {
+        this.alaService =  alaService;
+    }
+
+
+    @PostMapping
+    public ResponseEntity criarAla(@RequestBody GerarAlaQuartosELeitosDTO dto) {
+        return ResponseEntity.ok(this.alaService.criarAla(dto));
+    }
 
     //Hospital > Alas
     //Alas > Quartos
@@ -8,7 +32,7 @@ public class AlaAPI {
     //Leitos > Paciente
     //
     //
-    //Preciso de uma classe com a função GerarAlaQuartosLeitos
+    //Preciso de uma classe com a função GerarAlaQuartosELeitosDTO
     //Ao cadastrar uma ala, informar a sua especialidade, quantidade de quartos e quantidade de leitos por quarto;
     //Os quartos e leitos deverão ser gerados automaticamente após a requisição para gerar as alas;
     //Os quartos deverão ter um código conforme o exemplo:
@@ -31,4 +55,8 @@ public class AlaAPI {
     //
     //Regra, se todos os quartos estão ocupados,
     //não tem nenhum leito disponível
+
+    //https://dontpad.com/semanatressgcloud
+
+
 }
