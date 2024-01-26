@@ -15,4 +15,6 @@ public interface AlaRepository extends JpaRepository<Ala, Integer> {
     List<Ala> getByNomeContainsIgnoreCase(@Param("nome") String nome);
 
 
+
+
 }

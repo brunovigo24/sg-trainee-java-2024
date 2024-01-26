@@ -2,18 +2,20 @@ package semana03.hospital.ala;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import semana03.hospital.DTOs.GerarAlaQuartosELeitosDTO;
 import semana03.hospital.hospital.HospitalService;
+import semana03.hospital.leito.Leito;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/alas")
 public class AlaAPI {
 
     private final AlaService alaService;
+
+
 
     @Autowired
     public AlaAPI(AlaService alaService) {
@@ -31,7 +33,6 @@ public class AlaAPI {
         this.alaService.GerarAlasQuartosELeitos(dto);
         return ResponseEntity.ok().build();
     }
-
 
 
     //Hospital > Alas
