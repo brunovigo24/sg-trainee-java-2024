@@ -1,15 +1,16 @@
 package semana03.hospital.ala;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.type.SqlTypes;
 import semana03.hospital.Entity.EntityId;
-import semana03.hospital.leito.Leito;
 import semana03.hospital.quarto.Quarto;
 
-import java.util.ArrayList;
+
+
+
 import java.util.List;
 
 @Getter
@@ -18,13 +19,13 @@ import java.util.List;
 @Entity(name = "ala")
 public class Ala extends EntityId {
 
-    private List<Quarto> quartos = new ArrayList<>();
+
+    @JoinColumn(name = "ala_id")
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Quarto> quartos;
 
     @Column(name = "especialidade")
     private String especialidade;
-
     private String nome;
 
-    @Column(name = "hospital_id")
-    private Integer hospitalId;
 }

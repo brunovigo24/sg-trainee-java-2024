@@ -18,10 +18,8 @@ import java.util.List;
 @Entity(name = "leito")
 public class Leito extends EntityId {
 
-    private List<Paciente> pacientes = new ArrayList<>();
-
     @Column(name = "codigo")
-    private Integer codigo;
+    private String codigo;
 
     @Column(name = "status")
     private StatusLeito status;

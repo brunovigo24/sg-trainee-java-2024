@@ -21,10 +21,18 @@ public class AlaAPI {
     }
 
 
-    @PostMapping
+    /*@PostMapping
     public ResponseEntity criarAla(@RequestBody GerarAlaQuartosELeitosDTO dto) {
-        return ResponseEntity.ok(this.alaService.criarAla(dto));
+        return ResponseEntity.ok(this.alaService.GerarAlasQuartosELeitos(dto));
+    }*/
+
+    @PostMapping("/gerar")
+    public ResponseEntity GerarAlasQuartosELeitos(@RequestBody GerarAlaQuartosELeitosDTO dto) {
+        this.alaService.GerarAlasQuartosELeitos(dto);
+        return ResponseEntity.ok().build();
     }
+
+
 
     //Hospital > Alas
     //Alas > Quartos

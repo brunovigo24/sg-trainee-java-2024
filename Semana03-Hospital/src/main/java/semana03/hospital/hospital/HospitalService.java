@@ -51,5 +51,12 @@ public class HospitalService {
         return this.hospitalRepository.getByNomeContainsIgnoreCase("%" + nome + "%");
     }
 
+    @Transactional(readOnly = true)
+    public Hospital getById (Integer id) {
+        return this.hospitalRepository.findById(id).orElseThrow(() -> {
+            throw new RuntimeException("Hospital não encontrado");
+        });
+    }
+
 
 }

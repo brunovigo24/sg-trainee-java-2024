@@ -1,9 +1,6 @@
 package semana03.hospital.quarto;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -18,10 +15,13 @@ import java.util.List;
 @NoArgsConstructor
 @Entity(name = "quarto")
 public class Quarto extends EntityId {
-    private List<Leito> leitos = new ArrayList<>();
+
+    @JoinColumn(name = "quarto_id")
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Leito> leitos;
 
     @Column(name = "codigo")
-    private Integer codigo;
+    private String codigo;
 
     @Column(name = "status")
     private StatusQuarto status;
@@ -29,8 +29,6 @@ public class Quarto extends EntityId {
     @Column(name = "status_string")
     private StatusQuarto statusString;
 
-    @Column(name = "ala_id")
-    private Integer alaId;
 
 
 

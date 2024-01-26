@@ -1,17 +1,23 @@
 package semana03.hospital.DTOs;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import semana03.hospital.ala.Ala;
+
+import java.util.List;
 
 @Getter
 @Setter
-public abstract class GerarAlaQuartosELeitosDTO {
+@NoArgsConstructor
+@AllArgsConstructor
+public class GerarAlaQuartosELeitosDTO {
 
-    private String especialidade;
-    private String nome;
-    private int quantidadeQuartos;
-    private int quantidadeLeitosPorQuarto;
 
+    private Integer hospitalId;
+    private List<String> especialidade;
+    private Integer numeroDeAlas;
+    private Integer quantidadeDeQuartos;
+    private Integer quantidadeLeitosPorQuarto;
 
 }
