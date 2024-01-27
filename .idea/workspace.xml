@@ -5,19 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ef197b6-34fb-4a91-b765-a0171599e8c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/h2db.mv.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana03-Hospital/h2db.trace.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/Prova03Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/cliente/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/cliente/ClienteAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/cliente/ClienteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/cliente/ClienteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/helpers/EntityId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/identificadores/IdentificadorDePeca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/identificadores/IdentificadorDeServico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/identificadores/IdentificadorDeVeiculo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/ordemdeservico/OrdemDeServico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/peca/GerarIdentificadoresDePecaDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/peca/Peca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/peca/PecaAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/peca/PecaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/peca/PecaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/servico/GerarIdentificadoresDeServicoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/servico/Servico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/servico/ServicoAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/servico/ServicoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/servico/ServicoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/veiculo/GerarIdentificadoresDoVeiculoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/veiculo/Veiculo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/veiculo/VeiculoAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/veiculo/VeiculoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/java/com/prova03/prova03/veiculo/VeiculoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prova03/src/test/java/com/prova03/prova03/Prova03ApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/DTOs/GerarAlaQuartosELeitosDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/DTOs/GerarAlaQuartosELeitosDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/Ala.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/Ala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/AlaAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/AlaAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/AlaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/ala/AlaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/hospital/Hospital.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/hospital/Hospital.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/hospital/HospitalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/hospital/HospitalService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/leito/Leito.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/leito/Leito.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/quarto/Quarto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/java/semana03/hospital/quarto/Quarto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana03-Hospital/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Semana03-Hospital/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +70,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/professor/Desktop/biblioteca",
+    "last_opened_file_path": "C:/Users/professor/Desktop/sg-trainee-java-2024",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
