@@ -25,7 +25,7 @@ public class ClienteService {
 
     @Transactional
     public Cliente salvar(Cliente cliente) {
-        if (Objects.isNull(cliente.getNome()) || cliente.getNome().isEmpty()) {
+        if (Objects.isNull(cliente.getNomeCliente()) || cliente.getNomeCliente().isEmpty()) {
             throw new RuntimeException("Cliente sem nome");
         }
         return this.clienteRepository.save(cliente);
@@ -51,7 +51,7 @@ public class ClienteService {
     @Transactional(readOnly = true)
     public List<Cliente> getPorOrdemAlfabeticaPorNome(Integer id, String nome) {
         List<Cliente> clientes = this.clienteRepository.findAll();
-        clientes.sort(Comparator.comparing(Cliente::getNome));
+        clientes.sort(Comparator.comparing(Cliente::getNomeCliente));
         return this.clienteRepository.getByNomeContainsIgnoreCase("%" + id + "%" + nome );
     }
 
