@@ -5,19 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ef197b6-34fb-4a91-b765-a0171599e8c8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/cliente/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/cliente/ClienteAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/cliente/ClienteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/cliente/ClienteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/ingrediente/Ingrediente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/movimentacaoestoque/MovimentacaoEstoque.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/movimentacaoestoque/TipoMovimentacao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/Produto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/TipoDeProduto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/item/Adicional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/item/ItemAdicional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/item/ItemReceita.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/item/ItemVenda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/logs/LogCreditoCliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/logs/MovimentoCredito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/movimentacaoestoque/TipoMovimento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/Formato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/ProdutoAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/ProdutoFabricado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/ProdutoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/ProdutoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/TipoProduto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/venda/Venda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto-Biblioteca/sg-trainee-java-2024" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto-Biblioteca/sg-trainee-java-2024" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto-Biblioteca/sg-trainee-java-2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto-Biblioteca/sg-trainee-java-2024/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/cliente/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/cliente/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/movimentacaoestoque/MovimentacaoEstoque.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/movimentacaoestoque/MovimentacaoEstoque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/movimentacaoestoque/TipoMovimentacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/TipoDeProduto.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/receita/Receita.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/receita/Receita.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,28 +50,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/professor/Desktop/sg-trainee-java-2024&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/OneDrive/Área de Trabalho/sg-trainee-java-2024",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-e1d2075fd9a7-b4911678" />
-        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-f98dd351" />
-      </set>
-    </attachedChunks>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

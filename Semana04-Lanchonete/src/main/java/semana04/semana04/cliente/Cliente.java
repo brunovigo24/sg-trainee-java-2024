@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import semana04.semana04.helpers.EntityId;
 
+import java.math.BigDecimal;
+
 @NoArgsConstructor
 @Getter
 @Setter
@@ -14,4 +16,15 @@ import semana04.semana04.helpers.EntityId;
 public class Cliente extends EntityId {
     @Column(name = "nome")
     private String nome;
+    @Column(name = "cpf")
+    private String cpf;
+    @Column(name = "valorCreditos")
+    private BigDecimal valorCreditos;
+
+    public boolean adicionarCreditos(BigDecimal valor) {
+        // Implemente a lógica conforme necessário
+        return true;
+    }
+
+
 }
