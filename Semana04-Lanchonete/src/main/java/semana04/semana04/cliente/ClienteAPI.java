@@ -14,7 +14,7 @@ public class ClienteAPI {
         this.clienteService = clienteService;
     }
 
-    @PostMapping
+    @PostMapping("")
     public ResponseEntity salvar(@RequestBody Cliente cliente) {
         return ResponseEntity.ok(this.clienteService.salvar(cliente));
     }

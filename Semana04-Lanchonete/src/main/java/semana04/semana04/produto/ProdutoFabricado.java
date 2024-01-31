@@ -12,7 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 
-public class ProdutoFabricado {
-    private Receita receita;
+public class ProdutoFabricado extends Produto {
+    private Integer receitaId;
     private List<ItemAdicional> adicionais;
 }

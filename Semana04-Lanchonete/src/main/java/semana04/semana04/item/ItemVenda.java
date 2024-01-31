@@ -12,8 +12,8 @@ import java.math.BigDecimal;
 @Setter
 public class ItemVenda extends EntityId {
 
-    private Long vendaId;
-    private Long produtoId;
+    private Integer vendaId;
+    private Integer produtoId;
     private Integer quantidade;
     private BigDecimal valor;
 

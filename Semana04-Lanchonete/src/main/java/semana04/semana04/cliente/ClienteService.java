@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Objects;
 
 @Service
@@ -25,6 +26,11 @@ public class ClienteService {
         if (Objects.isNull(cliente.getNome()) || cliente.getNome().isEmpty()) {
             throw new RuntimeException("Cliente sem nome");
         }
+        if (Objects.isNull(cliente.getCpf()) || cliente.getCpf().isEmpty()) {
+            throw new RuntimeException("Cliente sem cpf");
+        }
+
+        //Tem que setar o bigDecimal.ZERO pois quando for puxar a função mov ou adicionar crédito se estiver vai dar bug
         return this.clienteRepository.save(cliente);
     }
 
@@ -37,12 +43,18 @@ public class ClienteService {
         return this.salvar(cliente);
     }
 
-    @Transactional
-    public void deletarCliente(Integer clienteId) {
-        this.pegarClientePorId(clienteId);
-        if (this.clienteRepository.existsIdentificadorComIdDoCliente(clienteId)) {
-            throw new RuntimeException("Cliente tem livro alugado");
-        }
+
+    @Transactional(readOnly = true)
+    public List<Cliente> findByNome(String nome) {
+        return this.clienteRepository.findAllByNome("%" + nome + "%");
     }
 
+    @Transactional
+    public void deletarCliente(Integer clienteId) {
+        /*this.pegarClientePorId(clienteId);
+        if (this.clienteRepository.findAllByNome()) {
+            throw new RuntimeException("Cliente tem créditos positivos");*/
+            this.clienteRepository.deleteById(clienteId);
+        //}
+    }
 }

@@ -19,10 +19,12 @@ import java.util.List;
 public class Venda extends EntityId {
 
 
+    /*@OneToMany(mappedBy = "venda")
+    private List<ItemVenda> itens;*/
+
+    //Implementar vendas DTO
     private Integer clienteId;
     private BigDecimal valor;
-    @OneToMany(mappedBy = "venda")
-    private List<ItemVenda> itens;
     private Date data;
 
 

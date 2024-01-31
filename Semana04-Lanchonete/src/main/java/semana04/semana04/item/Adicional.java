@@ -11,5 +11,9 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 public class Adicional extends EntityId {
+
+    //Validar se o produto existe
+    private Integer produtoId;
+
     private BigDecimal preco;
 }

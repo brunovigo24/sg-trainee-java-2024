@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class ProdutoService {
@@ -11,7 +12,7 @@ public class ProdutoService {
     private final ProdutoRepository produtoRepository;
 
     @Autowired
-    public ProdutoService (ProdutoRepository produtoRepository) {
+    public ProdutoService(ProdutoRepository produtoRepository) {
         this.produtoRepository = produtoRepository;
     }
 
@@ -24,9 +25,17 @@ public class ProdutoService {
     }
 
     public Produto salvarProduto(Produto produto) {
-        // Implementar validações
+        this.validarProduto(produto);
         return produtoRepository.save(produto);
     }
+
+    public void validarProduto(Produto produto) {
+        if (Objects.isNull(produto.getTipo()))
+            throw new RuntimeException("Produto sem tipo");
+        if (Objects.isNull(produto.getFormato()))
+            throw new RuntimeException("Produto sem formato");
+    }
+
 
     public void darEntradaEstoque(Integer idProduto, int quantidade) {
         Produto produto = produtoRepository.findById(idProduto).orElse(null);
@@ -34,4 +43,5 @@ public class ProdutoService {
             produto.setQuantidade(produto.getQuantidade() + quantidade);
             produtoRepository.save(produto);
         }
+    }
 }

@@ -6,15 +6,13 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import semana04.semana04.cliente.Cliente;
 
+import java.util.List;
+
 @Repository
 public interface ProdutoRepository extends JpaRepository<Produto, Integer> {
 
     @Query(nativeQuery = true,
-            value = "SELECT COUNT(*) > 0 " +
-                    "FROM identificador_de_livro i " +
-                    "WHERE i.produto_id = :protudoId")
-    Boolean existsIdentificadorComIdDoProduto(@Param("produtoId") Integer produtoId);
-
-
+            value = "SELECT * FROM produto WHERE nome ILIKE :nome")
+    List<Produto> findAllByNome(@Param("nome") String nome);
 
 }

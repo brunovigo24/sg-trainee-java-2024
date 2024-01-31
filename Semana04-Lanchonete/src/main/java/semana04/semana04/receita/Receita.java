@@ -15,18 +15,24 @@ import java.util.List;
 @Getter
 @Setter
 @Entity(name = "receita")
-public class Receita extends EntityId {
+public class Receita extends EntityId{
 
-    @OneToMany(mappedBy = "receita")
+
+    private Integer produtoId;
+
+    /*@OneToMany(mappedBy = "receita")
     private List<ItemReceita> ingredientes;
 
     //Fazer no API e service
+    /*
     public void verificarDisponibilidadeIngrediente() {
-        // Implemente a lógica conforme necessário
+        // Implementar lógica
     }
 
     public ProdutoFabricado produzir() {
-        // Implemente a lógica conforme necessário
+        // Implementar lógica
         return new ProdutoFabricado(this);
-    }
+    }*/
+
+    //Validar se é um insulmo e se existe
 }

@@ -22,6 +22,7 @@ public class Produto extends EntityId {
 
     @Column(name = "nome")
     private String nome;
+
     @Column(name = "precoCusto")
     private BigDecimal precoCusto;
 
@@ -36,11 +37,8 @@ public class Produto extends EntityId {
 
     @Enumerated(EnumType.STRING)
     private TipoProduto tipo;
+
     @Enumerated(EnumType.STRING)
     private Formato formato;
-
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
 
 }

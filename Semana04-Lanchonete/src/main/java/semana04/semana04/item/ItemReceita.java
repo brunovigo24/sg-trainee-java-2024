@@ -15,8 +15,9 @@ public class ItemReceita extends EntityId {
     private Integer receitaId;
     private Integer produtoId;
     private Integer quantidade;
-    public boolean ehIngrediente() {
+
+    /*public boolean ehIngrediente() {
         // Implemente a lógica conforme necessário
         return true;
-    }
+    }*/
 }

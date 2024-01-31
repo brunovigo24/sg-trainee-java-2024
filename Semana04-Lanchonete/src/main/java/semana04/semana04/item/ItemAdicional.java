@@ -12,6 +12,5 @@ import semana04.semana04.helpers.EntityId;
 public class ItemAdicional extends EntityId {
     private Integer adicionalId;
     private Integer produtoFabricadoId;
-    private double quantidade;
-
+    private int quantidade;
 }
