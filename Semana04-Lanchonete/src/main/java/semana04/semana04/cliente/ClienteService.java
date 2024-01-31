@@ -30,8 +30,10 @@ public class ClienteService {
         if (Objects.isNull(cliente.getCpf()) || cliente.getCpf().isEmpty()) {
             throw new RuntimeException("Cliente sem cpf");
         }
-        cliente.setValorCreditos(BigDecimal.ZERO);
-        //Tem que setar o bigDecimal.ZERO pois quando for puxar a função mov ou adicionar crédito se estiver vai dar bug
+        //Garantindo que atributo valorCreditos não seja nulo
+        if (Objects.isNull(cliente.getValorCreditos())) {
+            cliente.setValorCreditos(BigDecimal.ZERO);
+        }
         return this.clienteRepository.save(cliente);
     }
 
