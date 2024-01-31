@@ -26,7 +26,7 @@ public class ProdutoAPI {
         return produtoService.getProdutoById(id);
     }
 
-    @PostMapping
+    @PostMapping("")
     public Produto salvarProduto(@RequestBody Produto produto) {
         return produtoService.salvarProduto(produto);
     }
