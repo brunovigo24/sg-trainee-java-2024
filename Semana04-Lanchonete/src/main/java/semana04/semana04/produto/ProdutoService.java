@@ -3,6 +3,7 @@ package semana04.semana04.produto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -26,6 +27,7 @@ public class ProdutoService {
 
     public Produto salvarProduto(Produto produto) {
         this.validarProduto(produto);
+        produto.setDataCadastro(new Date());
         return produtoRepository.save(produto);
     }
 

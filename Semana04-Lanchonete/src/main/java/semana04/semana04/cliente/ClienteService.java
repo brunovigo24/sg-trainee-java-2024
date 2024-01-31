@@ -30,16 +30,21 @@ public class ClienteService {
         if (Objects.isNull(cliente.getCpf()) || cliente.getCpf().isEmpty()) {
             throw new RuntimeException("Cliente sem cpf");
         }
-
+        cliente.setValorCreditos(BigDecimal.ZERO);
         //Tem que setar o bigDecimal.ZERO pois quando for puxar a função mov ou adicionar crédito se estiver vai dar bug
         return this.clienteRepository.save(cliente);
     }
 
-    //Fazer método de adicionarCreditos
-    /*public void adicionarCreditos(Integer clienteId, BigDecimal valor) {
-        // Implementar a lógica
-        return true;
-    }*/
+    @Transactional
+    public void adicionarCreditos(Integer clienteId, BigDecimal valor) {
+        Cliente cliente = clienteRepository.findById(clienteId)
+                .orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
+        if (valor.compareTo(BigDecimal.ZERO) <= 0 ) {
+            throw new RuntimeException(" O valor dos créditos deve ser maior que zero");
+        }
+        cliente.setValorCreditos(cliente.getValorCreditos().add(valor));
+        clienteRepository.save(cliente);
+    }
 
     @Transactional
     public Cliente atualizar(Cliente cliente, Integer clienteId) {
