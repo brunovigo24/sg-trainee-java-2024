@@ -29,7 +29,7 @@ public class ClienteService {
     }
 
     @Transactional
-    public Cliente salvar(Cliente cliente) {
+    public Cliente salvar(Cliente cliente, BigDecimal valor) {
         if (Objects.isNull(cliente.getNome()) || cliente.getNome().isEmpty()) {
             throw new RuntimeException("Cliente sem nome");
         }
@@ -39,8 +39,17 @@ public class ClienteService {
         //Garantindo que atributo valorCreditos não seja nulo
         if (Objects.isNull(cliente.getValorCreditos())) {
             cliente.setValorCreditos(BigDecimal.ZERO);
-        }
-        return this.clienteRepository.save(cliente);
+        } else cliente.setValorCreditos(cliente.getValorCreditos().add(valor));
+
+        clienteRepository.save(cliente);
+
+        LogCreditoCliente logCreditoCliente = new LogCreditoCliente();
+        logCreditoCliente.setClienteId(cliente.getId());
+        logCreditoCliente.setValor(valor);
+        logCreditoCliente.setMovimento(MovimentoCredito.ENTRADA); // Ou outro tipo conforme sua lógica
+        logCreditoClienteRepository.save(logCreditoCliente);
+
+        return clienteRepository.save(cliente);
     }
 
     @Transactional
@@ -62,12 +71,12 @@ public class ClienteService {
     }
 
     @Transactional
-    public Cliente atualizar(Cliente cliente, Integer clienteId) {
+    public Cliente atualizar(Cliente cliente, Integer clienteId, BigDecimal valor) {
         if (!cliente.getId().equals(clienteId)) {
             throw new RuntimeException("Cliente diferente do ID");
         }
         this.pegarClientePorId(clienteId);
-        return this.salvar(cliente);
+        return this.salvar(cliente, valor);
     }
 
 

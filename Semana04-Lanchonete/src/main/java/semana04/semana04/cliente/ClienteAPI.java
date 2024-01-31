@@ -17,17 +17,17 @@ public class ClienteAPI {
     }
 
     @PostMapping("")
-    public ResponseEntity salvar(@RequestBody Cliente cliente) {
-        return ResponseEntity.ok(this.clienteService.salvar(cliente));
+    public ResponseEntity salvar(@RequestBody Cliente cliente, BigDecimal valor) {
+        return ResponseEntity.ok(this.clienteService.salvar(cliente, valor));
     }
-    @PostMapping("/{clienteId}/adicionar-creditos")
-    public void adicionarCreditos(@PathVariable Integer clienteId, @RequestParam BigDecimal valor) {
+    @PutMapping("/adicionar-creditos/{clienteId}")
+    public void adicionarCreditos(@PathVariable("clienteId")Integer clienteId, @RequestParam ("valor") BigDecimal valor) {
         clienteService.adicionarCreditos(clienteId, valor);
     }
     @PutMapping("/{id}")
-    public ResponseEntity atualizar(@RequestBody Cliente cliente,
+    public ResponseEntity atualizar(@RequestBody Cliente cliente, BigDecimal valor,
                                     @PathVariable Integer id) {
-        return ResponseEntity.ok(this.clienteService.salvar(cliente));
+        return ResponseEntity.ok(this.clienteService.salvar(cliente, valor));
     }
 
     @DeleteMapping("/{id}")
