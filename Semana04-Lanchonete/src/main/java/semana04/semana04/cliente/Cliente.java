@@ -21,10 +21,4 @@ public class Cliente extends EntityId {
     @Column(name = "valorCreditos")
     private BigDecimal valorCreditos;
 
-    public boolean adicionarCreditos(BigDecimal valor) {
-        // Implemente a lógica conforme necessário
-        return true;
-    }
-
-
 }

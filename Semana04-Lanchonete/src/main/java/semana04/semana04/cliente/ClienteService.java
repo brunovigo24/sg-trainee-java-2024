@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Objects;
 
@@ -33,6 +34,12 @@ public class ClienteService {
         //Tem que setar o bigDecimal.ZERO pois quando for puxar a função mov ou adicionar crédito se estiver vai dar bug
         return this.clienteRepository.save(cliente);
     }
+
+    //Fazer método de adicionarCreditos
+    /*public void adicionarCreditos(Integer clienteId, BigDecimal valor) {
+        // Implementar a lógica
+        return true;
+    }*/
 
     @Transactional
     public Cliente atualizar(Cliente cliente, Integer clienteId) {

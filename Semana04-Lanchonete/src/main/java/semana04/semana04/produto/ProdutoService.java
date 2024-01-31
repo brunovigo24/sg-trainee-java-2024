@@ -29,6 +29,7 @@ public class ProdutoService {
         return produtoRepository.save(produto);
     }
 
+    //Setar Data de cadastro ao salvar produto
     public void validarProduto(Produto produto) {
         if (Objects.isNull(produto.getTipo()))
             throw new RuntimeException("Produto sem tipo");

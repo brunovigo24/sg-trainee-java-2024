@@ -6,22 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7ef197b6-34fb-4a91-b765-a0171599e8c8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/cliente/ClienteAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/cliente/ClienteAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/cliente/ClienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/cliente/ClienteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/h2db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/h2db.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/cliente/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/cliente/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/cliente/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/cliente/ClienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/ingrediente/Ingrediente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/item/Adicional.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/item/Adicional.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/item/ItemAdicional.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/item/ItemAdicional.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/item/ItemReceita.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/item/ItemReceita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/item/ItemVenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/item/ItemVenda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/ProdutoFabricado.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/ProdutoFabricado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/ProdutoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/ProdutoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/ProdutoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/ProdutoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/TipoProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/produto/TipoProduto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/receita/Receita.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/receita/Receita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/venda/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/java/semana04/semana04/venda/Venda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Semana04-Lanchonete/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
