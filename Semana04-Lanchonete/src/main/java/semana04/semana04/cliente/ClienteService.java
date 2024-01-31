@@ -3,6 +3,9 @@ package semana04.semana04.cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import semana04.semana04.logs.LogCreditoCliente;
+import semana04.semana04.logs.LogCreditoClienteRepository;
+import semana04.semana04.logs.MovimentoCredito;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -12,9 +15,12 @@ import java.util.Objects;
 public class ClienteService {
     private final ClienteRepository clienteRepository;
 
+    private final LogCreditoClienteRepository logCreditoClienteRepository;
+
     @Autowired
-    public ClienteService(ClienteRepository clienteRepository) {
+    public ClienteService(ClienteRepository clienteRepository, LogCreditoClienteRepository logCreditoClienteRepository) {
         this.clienteRepository = clienteRepository;
+        this.logCreditoClienteRepository = logCreditoClienteRepository;
     }
 
     @Transactional(readOnly = true)
@@ -46,6 +52,13 @@ public class ClienteService {
         }
         cliente.setValorCreditos(cliente.getValorCreditos().add(valor));
         clienteRepository.save(cliente);
+
+        //Registrar mov de cliente
+        LogCreditoCliente logCreditoCliente = new LogCreditoCliente();
+        logCreditoCliente.setClienteId(cliente.getId());
+        logCreditoCliente.setValor(valor);
+        logCreditoCliente.setMovimento(MovimentoCredito.ENTRADA); // Ou outro tipo conforme sua lógica
+        logCreditoClienteRepository.save(logCreditoCliente);
     }
 
     @Transactional

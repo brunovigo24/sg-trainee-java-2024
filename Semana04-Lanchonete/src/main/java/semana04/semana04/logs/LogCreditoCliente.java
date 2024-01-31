@@ -15,10 +15,9 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity(name = "logcreditocliente")
-
 public class LogCreditoCliente extends EntityId {
 
-    private Long clienteId;
+    private Integer clienteId;
     private BigDecimal valor;
     private Date data;
     @Enumerated(EnumType.STRING)
