@@ -46,7 +46,7 @@ public class ClienteService {
         LogCreditoCliente logCreditoCliente = new LogCreditoCliente();
         logCreditoCliente.setClienteId(cliente.getId());
         logCreditoCliente.setValor(valor);
-        logCreditoCliente.setMovimento(MovimentoCredito.ENTRADA); // Ou outro tipo conforme sua lógica
+        logCreditoCliente.setMovimento(MovimentoCredito.ENTRADA);
         logCreditoClienteRepository.save(logCreditoCliente);
 
         return clienteRepository.save(cliente);
@@ -66,7 +66,7 @@ public class ClienteService {
         LogCreditoCliente logCreditoCliente = new LogCreditoCliente();
         logCreditoCliente.setClienteId(cliente.getId());
         logCreditoCliente.setValor(valor);
-        logCreditoCliente.setMovimento(MovimentoCredito.ENTRADA); // Ou outro tipo conforme sua lógica
+        logCreditoCliente.setMovimento(MovimentoCredito.ENTRADA);
         logCreditoClienteRepository.save(logCreditoCliente);
     }
 

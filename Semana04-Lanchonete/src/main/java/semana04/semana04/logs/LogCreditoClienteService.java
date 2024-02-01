@@ -25,7 +25,6 @@ public class LogCreditoClienteService {
 
     @Transactional
     public List<LogCreditoCliente> getLogsCreditoClienteByClienteId(Integer clienteId) {
-        // Implemente a lógica para buscar logs de crédito por clienteId
         return logCreditoClienteRepository.findByClienteId(clienteId);
     }
 

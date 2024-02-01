@@ -22,7 +22,7 @@ public class LogCreditoClienteAPI {
 
     @GetMapping("/cliente/{clienteId}")
     public List<LogCreditoCliente> getLogsCreditoClienteByClienteId(@PathVariable Integer clienteId) {
-        // Exemplo: Buscar logs de crédito para um cliente específico
+        // Buscar logs de crédito para um cliente específico
         return logCreditoClienteService.getLogsCreditoClienteByClienteId(clienteId);
     }
 
