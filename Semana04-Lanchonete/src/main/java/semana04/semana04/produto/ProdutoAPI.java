@@ -31,8 +31,8 @@ public class ProdutoAPI {
         return produtoService.salvarProduto(produto);
     }
 
-    @PostMapping("/{id}/entrada-estoque")
-    public void darEntradaEstoque(@PathVariable Integer id, @RequestParam int quantidade) {
+    @PutMapping("entrada-estoque/{id}")
+    public void darEntradaEstoque(@PathVariable("id") Integer id, @RequestParam("quantidade") int quantidade) {
         produtoService.darEntradaEstoque(id, quantidade);
     }
 

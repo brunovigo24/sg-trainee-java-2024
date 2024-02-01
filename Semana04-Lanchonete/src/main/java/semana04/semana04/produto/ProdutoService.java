@@ -39,8 +39,6 @@ public class ProdutoService {
             throw new RuntimeException("Produto sem formato");
     }
 
-
-    //Não está funcionando
     public void darEntradaEstoque(Integer idProduto, int quantidade) {
         Produto produto = produtoRepository.findById(idProduto)
                 .orElseThrow(() -> new RuntimeException("Pruduto não encontrado"));
