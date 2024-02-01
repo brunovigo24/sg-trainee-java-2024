@@ -1,4 +1,4 @@
-package semana04.semana04.venda;
+package semana04.semana04.adicional;
 
 import jakarta.persistence.Entity;
 import lombok.Getter;
@@ -12,10 +12,9 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @Entity
-public class Adicional extends EntityId {
-
-    //Validar se o produto existe
-    private Integer produtoId;
-
-    private BigDecimal preco;
+public class ItemAdicional extends EntityId {
+    private Integer adicionalId;
+    private Integer produtoFabricadoId;
+    private int quantidade;
+    private BigDecimal valor;
 }

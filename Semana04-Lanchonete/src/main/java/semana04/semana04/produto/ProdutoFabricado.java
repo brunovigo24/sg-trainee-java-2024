@@ -1,10 +1,14 @@
 package semana04.semana04.produto;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import semana04.semana04.venda.ItemAdicional;
+import semana04.semana04.adicional.ItemAdicional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor
@@ -12,5 +16,8 @@ import java.util.List;
 @Setter
 public class ProdutoFabricado extends Produto {
     private Integer receitaId;
-    private List<ItemAdicional> adicionais;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "produtofabricado_id")
+    private List<ItemAdicional> adicionais = new ArrayList<>();
 }

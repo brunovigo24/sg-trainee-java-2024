@@ -40,11 +40,12 @@ public class ProdutoService {
     }
 
 
+    //Não está funcionando
     public void darEntradaEstoque(Integer idProduto, int quantidade) {
-        Produto produto = produtoRepository.findById(idProduto).orElse(null);
-        if (produto != null) {
-            produto.setQuantidade(produto.getQuantidade() + quantidade);
-            produtoRepository.save(produto);
-        }
+        Produto produto = produtoRepository.findById(idProduto)
+                .orElseThrow(() -> new RuntimeException("Pruduto não encontrado"));
+        produto.setQuantidade(produto.getQuantidade() + quantidade);
+        produtoRepository.save(produto);
     }
 }
+
