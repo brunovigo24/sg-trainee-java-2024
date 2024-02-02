@@ -12,6 +12,7 @@ import java.util.List;
 @Setter
 public class VendaDTO {
     private Integer clienteId;
-    private BigDecimal valor;
-    private List<ItemVenda> itens;
+
+    private List<Integer> produtoId;
+    private List<Integer> quantidades;
 }

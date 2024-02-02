@@ -17,7 +17,6 @@ import java.util.List;
 @Entity(name = "venda")
 public class Venda extends EntityId {
 
-
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "venda_id")
     private List<ItemVenda> itens = new ArrayList<>();

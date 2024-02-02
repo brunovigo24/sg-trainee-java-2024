@@ -70,6 +70,14 @@ public class ClienteService {
         logCreditoClienteRepository.save(logCreditoCliente);
     }
 
+    public boolean verificarCreditosCliente(Integer clienteId, BigDecimal valorVenda) {
+        Cliente cliente = clienteRepository.findById(clienteId)
+                .orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
+
+        // Verificar se o cliente tem créditos suficientes
+        return cliente.getValorCreditos().compareTo(valorVenda) >= 0;
+    }
+
     @Transactional
     public Cliente atualizar(Cliente cliente, Integer clienteId, BigDecimal valor) {
         if (!cliente.getId().equals(clienteId)) {
@@ -93,4 +101,5 @@ public class ClienteService {
             this.clienteRepository.deleteById(clienteId);
         //}
     }
+
 }

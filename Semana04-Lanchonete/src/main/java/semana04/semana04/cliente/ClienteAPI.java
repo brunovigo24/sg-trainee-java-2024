@@ -24,6 +24,13 @@ public class ClienteAPI {
     public void adicionarCreditos(@PathVariable("clienteId")Integer clienteId, @RequestParam ("valor") BigDecimal valor) {
         clienteService.adicionarCreditos(clienteId, valor);
     }
+
+    @GetMapping("/verificar-creditos/{clienteId}/{valorVenda}")
+    public boolean verificarCreditosCliente(
+            @PathVariable Integer clienteId,
+            @PathVariable BigDecimal valorVenda) {
+        return clienteService.verificarCreditosCliente(clienteId, valorVenda);
+    }
     @PutMapping("/{id}")
     public ResponseEntity atualizar(@RequestBody Cliente cliente, BigDecimal valor,
                                     @PathVariable Integer id) {
