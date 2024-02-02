@@ -21,15 +21,25 @@ public class ProdutoAPI {
         return produtoService.getAllProdutos();
     }
 
+
     @GetMapping("/{id}")
     public Produto getProdutoById(@PathVariable Integer id) {
         return produtoService.getProdutoById(id);
     }
+    //http://localhost:8080/produto/entrada-estoque/1?quantidade=5
 
     @PostMapping("")
     public Produto salvarProduto(@RequestBody Produto produto) {
         return produtoService.salvarProduto(produto);
     }
+    //http://localhost:8080/produto
+    //{
+    //	"nome": "Bolacha",
+    //	"precoCusto": 3.00,
+    //	"precoVenda": 6.00,
+    //	"tipo": "PRODUTO_FINAL",
+    //	"formato": "UNIDADE"
+    //}
 
     @PutMapping("entrada-estoque/{id}")
     public void darEntradaEstoque(@PathVariable("id") Integer id, @RequestParam("quantidade") int quantidade) {

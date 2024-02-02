@@ -41,6 +41,7 @@ public class VendaService {
             Integer produtoId = vendaDTO.getProdutoId().get(i);
             Integer quantidade = vendaDTO.getQuantidades().get(i);
 
+            produtoService.verificarDisponibilidadeProduto(produtoId, quantidade);
             Produto produto = produtoService.getProdutoById(produtoId);
 
             ItemVenda itemVenda = new ItemVenda();
@@ -58,7 +59,6 @@ public class VendaService {
         BigDecimal valorTotal = calcularValorTotal(vendaDTO);
 
         clienteService.verificarCreditosCliente(vendaDTO.getClienteId(), valorTotal);
-        //produtoService.verificarDisponibilidadeProduto(Integer produtoId, Integer quantidade);
 
         Venda venda = new Venda();
         venda.setClienteId(vendaDTO.getClienteId());
@@ -75,6 +75,7 @@ public class VendaService {
         logCreditoCliente.setMovimento(MovimentoCredito.SAIDA_COMPRA);
 
         logCreditoClienteService.salvarLogCreditoCliente(logCreditoCliente);
+        clienteService.retirarCreditosAoFinalizarVenda(vendaDTO.getClienteId(), valorTotal);
     }
 
     private void verificarDisponibilidadeEAtualizarEstoque(VendaDTO vendaDTO) {

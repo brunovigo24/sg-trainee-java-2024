@@ -20,10 +20,18 @@ public class ClienteAPI {
     public ResponseEntity salvar(@RequestBody Cliente cliente, BigDecimal valor) {
         return ResponseEntity.ok(this.clienteService.salvar(cliente, valor));
     }
+    //http://localhost:8080/cliente
+    //{
+    //	"nome": "Bruno",
+    //	"cpf": "05399129990"
+    //}
+
     @PutMapping("/adicionar-creditos/{clienteId}")
     public void adicionarCreditos(@PathVariable("clienteId")Integer clienteId, @RequestParam ("valor") BigDecimal valor) {
         clienteService.adicionarCreditos(clienteId, valor);
     }
+    //http://localhost:8080/cliente/adicionar-creditos/2?valor=100.00
+    
 
     @GetMapping("/verificar-creditos/{clienteId}/{valorVenda}")
     public boolean verificarCreditosCliente(
