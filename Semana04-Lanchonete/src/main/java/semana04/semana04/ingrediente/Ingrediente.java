@@ -1,4 +1,4 @@
-package semana04.semana04.receita;
+package semana04.semana04.ingrediente;
 
 import jakarta.persistence.Entity;
 import lombok.Getter;

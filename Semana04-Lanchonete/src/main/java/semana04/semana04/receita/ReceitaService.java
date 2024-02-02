@@ -3,6 +3,7 @@ package semana04.semana04.receita;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import semana04.semana04.ingrediente.Ingrediente;
 import semana04.semana04.produto.ProdutoFabricado;
 import semana04.semana04.produto.ProdutoService;
 

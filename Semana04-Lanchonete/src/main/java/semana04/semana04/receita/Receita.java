@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import semana04.semana04.helpers.EntityId;
+import semana04.semana04.ingrediente.Ingrediente;
 
 import java.util.List;
 
