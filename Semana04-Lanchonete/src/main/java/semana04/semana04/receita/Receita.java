@@ -21,18 +21,5 @@ public class Receita extends EntityId{
     @JoinColumn(name = "receita_id")
     private List<Ingrediente> ingredientes;
 
-    //Fazer no API e service
-    /*
-    public void verificarDisponibilidadeIngrediente() {
-        // Implementar lógica
-    }
 
-    public ProdutoFabricado produzir() {
-        // Implementar lógica
-        return new ProdutoFabricado(this);
-    }*/
-
-    //Validar se é um insulmo e se existe
-
-    //}
 }

@@ -34,7 +34,6 @@ public class LogCreditoClienteService {
     }
     @Transactional
     public LogCreditoCliente salvarLogCreditoCliente(LogCreditoCliente logCreditoCliente) {
-        // Implementar validações
         return logCreditoClienteRepository.save(logCreditoCliente);
     }
 }

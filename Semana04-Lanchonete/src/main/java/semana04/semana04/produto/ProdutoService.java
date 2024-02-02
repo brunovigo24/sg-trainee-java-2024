@@ -52,5 +52,17 @@ public class ProdutoService {
         produto.setQuantidade(produto.getQuantidade() + quantidade);
         produtoRepository.save(produto);
     }
+
+    public void atualizarEstoqueAoFinalizarVenda(Integer produtoId, Integer quantidadeVendida) {
+        Produto produto = produtoRepository.findById(produtoId)
+                .orElseThrow(() -> new RuntimeException("Produto não encontrado"));
+
+        if (produto.getQuantidade() < quantidadeVendida) {
+            throw new RuntimeException("Quantidade vendida maior que a disponível em estoque");
+        }
+
+        produto.setQuantidade(produto.getQuantidade() - quantidadeVendida);
+        produtoRepository.save(produto);
+    }
 }
 

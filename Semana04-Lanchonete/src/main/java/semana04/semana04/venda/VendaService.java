@@ -76,17 +76,17 @@ public class VendaService {
 
         logCreditoClienteService.salvarLogCreditoCliente(logCreditoCliente);
         clienteService.retirarCreditosAoFinalizarVenda(vendaDTO.getClienteId(), valorTotal);
+        atualizarEstoqueAoFinalizarVenda(vendaDTO);
     }
 
-    private void verificarDisponibilidadeEAtualizarEstoque(VendaDTO vendaDTO) {
+    private void atualizarEstoqueAoFinalizarVenda(VendaDTO vendaDTO) {
         for (int i = 0; i < vendaDTO.getProdutoId().size(); i++) {
             Integer produtoId = vendaDTO.getProdutoId().get(i);
             Integer quantidade = vendaDTO.getQuantidades().get(i);
 
-            //produtoService.verificarDisponibilidadeEAtualizarEstoque(produtoId, quantidade);
+            produtoService.atualizarEstoqueAoFinalizarVenda(produtoId, quantidade);
         }
     }
-
     private BigDecimal calcularValorTotal(VendaDTO vendaDTO) {
         BigDecimal valorTotal = BigDecimal.ZERO;
 

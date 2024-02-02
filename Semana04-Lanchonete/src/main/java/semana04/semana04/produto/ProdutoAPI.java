@@ -21,12 +21,10 @@ public class ProdutoAPI {
         return produtoService.getAllProdutos();
     }
 
-
     @GetMapping("/{id}")
     public Produto getProdutoById(@PathVariable Integer id) {
         return produtoService.getProdutoById(id);
     }
-    //http://localhost:8080/produto/entrada-estoque/1?quantidade=5
 
     @PostMapping("")
     public Produto salvarProduto(@RequestBody Produto produto) {
@@ -45,5 +43,6 @@ public class ProdutoAPI {
     public void darEntradaEstoque(@PathVariable("id") Integer id, @RequestParam("quantidade") int quantidade) {
         produtoService.darEntradaEstoque(id, quantidade);
     }
+    //http://localhost:8080/produto/entrada-estoque/1?quantidade=5
 
 }
