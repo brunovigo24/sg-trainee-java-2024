@@ -2,6 +2,7 @@ package semana04.semana04.ingrediente;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import semana04.semana04.produto.Produto;
 
 @Service
 public class IngredienteService {
@@ -20,4 +21,10 @@ public class IngredienteService {
         return ingrediente.getQuantidade() >= quantidade;
     }
 
+    public void darEntradaEstoque(Integer ingredienteId, int quantidade) {
+        Ingrediente ingrediente = ingredienteRepository.findById(ingredienteId)
+                .orElseThrow(() -> new RuntimeException("Ingrediente não encontrado"));
+        ingrediente.setQuantidade(ingrediente.getQuantidade() + quantidade);
+        ingredienteRepository.save(ingrediente);
+    }
 }

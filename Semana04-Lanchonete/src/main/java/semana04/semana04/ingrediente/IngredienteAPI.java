@@ -1,10 +1,7 @@
 package semana04.semana04.ingrediente;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/ingrediente")
@@ -26,5 +23,11 @@ public class IngredienteAPI {
             return e.getMessage();
         }
     }
+
+    @PutMapping("entrada-estoque/{id}")
+    public void darEntradaEstoque(@PathVariable("id") Integer id, @RequestParam("quantidade") int quantidade) {
+        ingredienteService.darEntradaEstoque(id, quantidade);
+    }
+    //http://localhost:8080/ingrediente/entrada-estoque/1?quantidade=5
 
 }
