@@ -15,14 +15,14 @@ public class IngredienteService {
     }
 
     public boolean verificarDisponibilidadeIngrediente(Integer ingredienteId, Integer quantidade) {
-        Ingrediente ingrediente = ingredienteRepository.findById(ingredienteId)
+        Ingrediente ingrediente = ingredienteRepository.findById(Long.valueOf(ingredienteId))
                 .orElseThrow(() -> new RuntimeException("Ingrediente não encontrado"));
 
         return ingrediente.getQuantidade() >= quantidade;
     }
 
     public void darEntradaEstoque(Integer ingredienteId, int quantidade) {
-        Ingrediente ingrediente = ingredienteRepository.findById(ingredienteId)
+        Ingrediente ingrediente = ingredienteRepository.findById(Long.valueOf(ingredienteId))
                 .orElseThrow(() -> new RuntimeException("Ingrediente não encontrado"));
         ingrediente.setQuantidade(ingrediente.getQuantidade() + quantidade);
         ingredienteRepository.save(ingrediente);
