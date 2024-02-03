@@ -13,6 +13,11 @@ public class IngredienteService {
         this.ingredienteRepository = ingredienteRepository;
     }
 
+    public boolean verificarDisponibilidadeIngrediente(Integer ingredienteId, Integer quantidade) {
+        Ingrediente ingrediente = ingredienteRepository.findById(ingredienteId)
+                .orElseThrow(() -> new RuntimeException("Ingrediente não encontrado"));
 
+        return ingrediente.getQuantidade() >= quantidade;
+    }
 
 }

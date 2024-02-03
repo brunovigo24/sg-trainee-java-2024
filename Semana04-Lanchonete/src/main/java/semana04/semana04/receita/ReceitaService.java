@@ -24,11 +24,12 @@ public class ReceitaService {
                 .orElseThrow(() -> new RuntimeException("Receita não encontrada"));
 
         for (Ingrediente ingrediente : receita.getIngredientes()) {
-            if (!produtoService.verificarDisponibilidadeProduto(ingrediente.getProdutoId(), ingrediente.getQuantidade())) {
+            if (!produtoService.verificarDisponibilidadeProduto(ingrediente.getProduto().getId(), ingrediente.getQuantidade())) {
                 throw new RuntimeException("Ingrediente não disponível em estoque");
             }
         }
     }
+
     public ProdutoFabricado produzir(Integer receitaId) {
         Receita receita = receitaRepository.findById(receitaId)
                 .orElseThrow(() -> new RuntimeException("Receita não encontrada"));

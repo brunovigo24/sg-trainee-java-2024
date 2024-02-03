@@ -2,7 +2,9 @@ package semana04.semana04.produto;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import semana04.semana04.venda.ItemVenda;
+import semana04.semana04.ingrediente.Ingrediente;
+import semana04.semana04.ingrediente.IngredienteRepository;
+import semana04.semana04.ingrediente.IngredienteService;
 
 import java.util.Date;
 import java.util.List;
@@ -13,9 +15,16 @@ public class ProdutoService {
 
     private final ProdutoRepository produtoRepository;
 
+    private final IngredienteRepository ingredienteRepository;
+
+    private final IngredienteService ingredienteService;
     @Autowired
-    public ProdutoService(ProdutoRepository produtoRepository) {
+    public ProdutoService(ProdutoRepository produtoRepository,
+                          IngredienteRepository ingredienteRepository,
+                          IngredienteService ingredienteService) {
         this.produtoRepository = produtoRepository;
+        this.ingredienteRepository = ingredienteRepository;
+        this.ingredienteService = ingredienteService;
     }
 
     public List<Produto> getAllProdutos() {
@@ -29,6 +38,18 @@ public class ProdutoService {
     public Produto salvarProduto(Produto produto) {
         this.validarProduto(produto);
         produto.setDataCadastro(new Date());
+
+
+        //Função para caso o enum for INGREDIENTE ele ser cadastrado no Ingredinte, não no Produto.
+        Produto produtoSalvo = produtoRepository.save(produto);
+
+        if (TipoProduto.INGREDIENTE.equals(produto.getTipo())) {
+            Ingrediente ingrediente = new Ingrediente();
+            ingrediente.setProduto(produtoSalvo);
+            ingrediente.setQuantidade(0);  // Defina a quantidade inicial conforme necessário
+            ingredienteRepository.save(ingrediente);
+        }
+
         return produtoRepository.save(produto);
     }
 
